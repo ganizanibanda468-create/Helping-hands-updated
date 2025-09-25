@@ -1,0 +1,311 @@
+/* -------------------------------------------------------------------------- */
+/* 2.1. Establish a Base Style & CSS Reset */
+/* -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Base style with rem for size and em for line height (relative units) */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Base font size for rem calculation */
+    line-height: 1.6em;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Central container for page content */
+main {
+    max-width: 75rem; /* 1200px / 16px = 75rem */
+    margin: 1.25rem auto; /* 20px / 16px = 1.25rem */
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px/16px = 0.25rem, 8px/16px = 0.5rem */
+}
+
+section {
+    padding: 1.25rem 0;
+    margin-bottom: 1.875rem; /* 30px / 16px = 1.875rem */
+    border-bottom: 1px solid #eee;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2.3. Apply Typography Styles (Using relative units like rem and em) */
+/* -------------------------------------------------------------------------- */
+h1 {
+    font-size: 2.5rem; /* 40px / 16px = 2.5rem */
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.5em; /* relative to h1 font-size */
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.8rem; /* 28.8px / 16px = 1.8rem */
+    font-weight: 600;
+    color: #0056b3;
+    margin-top: 1.5em; /* relative to h2 font-size */
+    margin-bottom: 0.8em;
+}
+
+h3 {
+    font-size: 1.3rem; /* 20.8px / 16px = 1.3rem */
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em; /* relative to body font-size */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2.4. Create a Layout Structure (Desktop First) */
+/* -------------------------------------------------------------------------- */
+
+/* Navigation Bar */
+nav {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0.625rem 1.25rem; /* 10px / 16px = 0.625rem */
+    background-color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    border-bottom: 2px solid #007bff;
+}
+
+nav li {
+    padding: 0 0.9375rem; /* 15px / 16px = 0.9375rem */
+}
+
+nav a[href="#"]:first-child {
+    margin-right: auto;
+}
+
+nav img {
+    height: 2.5rem; /* 40px / 16px = 2.5rem */
+}
+
+/* Hero Section (Header) layout for index.html */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.875rem; /* 30px / 16px = 1.875rem */
+    padding: 2.5rem 1.25rem; /* 40px / 16px = 2.5rem */
+    margin-bottom: 1.875rem;
+    background-color: #e9f5ff;
+    border-radius: 5px;
+}
+
+header img {
+    flex: 1 1 45%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 4px;
+}
+
+header div {
+    flex: 1 1 45%;
+}
+
+/* Impact Stats Section (Desktop Grid) */
+.impact-stats > div {
+    display: grid;
+    /* Maintain multi-column on larger screens */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.25rem;
+    text-align: center;
+    padding: 1.25rem 0;
+}
+
+.impact-stats div > div {
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+/* Programs Preview Section (Desktop Flex) */
+.programs-preview > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+}
+
+.programs-preview div > div {
+    flex: 1 1 18.75rem; /* 300px / 16px = 18.75rem. Provides multi-column layout for desktop/tablet */
+    text-align: center;
+    padding: 0.9375rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Events and Get Involved Sections (Desktop Grid) */
+.event-list > div, .get-involved-options > div, .past-events-gallery > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px/16px = 18.75rem */
+    gap: 1.875rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2.5. Apply Visual Styles */
+/* -------------------------------------------------------------------------- */
+/* Note: No changes needed to visual styles from the previous version, as they were already robust. */
+button, input[type="submit"], .cta-button, a:not(nav a):not(footer a):not(.programs-preview a) {
+    background-color: #28a745;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0.125rem 0.25rem rgba(40, 167, 69, 0.4);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0.9375rem;
+}
+
+button:hover, input[type="submit"]:hover, .cta-button:hover, a:not(nav a):not(footer a):not(.programs-preview a):hover {
+    background-color: #1e7e34;
+    text-decoration: none;
+    box-shadow: 0 0.25rem 0.5rem rgba(40, 167, 69, 0.5);
+}
+
+#amount + div button {
+    background-color: #007bff;
+    padding: 0.5rem 0.9375rem;
+    margin-right: 0.3125rem;
+    font-size: 0.9em;
+    text-transform: none;
+    box-shadow: none;
+}
+
+#amount + div button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.9375rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Footer Styles */
+footer {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    background-color: #333;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+footer img {
+    height: 3.125rem;
+    margin-bottom: 0.9375rem;
+}
+
+footer a {
+    color: #ffc107;
+    margin: 0 0.625rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 3. Responsive Design (Mobile Breakpoint) */
+/* -------------------------------------------------------------------------- */
+/* Use media queries to apply specific styles to different screen sizes. */
+@media (max-width: 768px) {
+    /* Modify the content layout, font sizes, and navigation for each breakpoint. */
+
+    /* Typography adjustments for smaller screens */
+    h1 {
+        font-size: 2rem; /* Reduce main heading size */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduce sub-heading size */
+    }
+
+    /* Navigation adjustments (Switches from horizontal to stacked) */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+        padding-top: 0.5rem;
+    }
+    
+    nav li {
+        padding: 0.5rem 0;
+        width: 100%;
+        border-bottom: 1px dashed #eee;
+    }
+
+    nav a[href="#"]:first-child {
+        margin-right: 0;
+    }
+    
+    /* Hero Section: Switch to single-column layout */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img, header div {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    /* Sections: Switch multi-column layouts to a single column */
+    .impact-stats > div,
+    .programs-preview > div,
+    .event-list > div,
+    .past-events-gallery > div {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        flex-direction: column;
+    }
+
+    /* Contact Page: Stack contact info sections */
+    .contact-info > div {
+        padding-bottom: 1rem;
+    }
+
+    /* Buttons: Ensure full width for better touch targets if needed, though they are fine as inline-block */
+    /* If you wanted full width buttons on mobile, you'd add:
+    button, input[type="submit"], .cta-button, a:not(nav a):not(footer a):not(.programs-preview a) {
+        width: 100%;
+        display: block;
+    }
+    */
+}
