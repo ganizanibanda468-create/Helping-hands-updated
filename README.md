@@ -49,3 +49,14 @@ The project is organized into seven core files, providing six distinct web pages
 1.  Clone or download the project files.
 2.  Open **`index.html`** in any web browser to view the homepage and navigate the site.
 3.  Ensure the **`style.css`** file is linked and accessible for proper rendering.
+### 3.4. Responsive Design Screenshots
+
+To demonstrate the responsive design achieved with CSS Media Queries, here are comparative views of the homepage.
+
+#### Desktop View (Computer)
+
+![![Alt text](<images/desktop view.PNG>)](desktop%20view.jpg)
+
+#### Mobile View (Tablet/Phone)
+
+![![Alt text](<images/mobile view png.PNG>).](mobile%20view%20png.PNG)
