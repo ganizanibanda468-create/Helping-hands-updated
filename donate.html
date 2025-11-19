@@ -3,59 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Helping Hands Foundation</title>
+    <title>Helping Hands Foundation - Donate</title>
+    <!-- REQUIRED: Link the external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-    <section>
-        <h1>Make a Difference Today</h1>
-        <p>Your generous donation helps us continue our mission of providing essential support to families in need across South Africa.</p>
-    </section>
 
-    <section>
-        <h2>Donation Details</h2>
-        <form>
-            <div>
-                <label for="amount">Donation Amount (ZAR)</label>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Make a Difference Today</h1>
+            <p>Your generous donation helps us continue our mission of providing essential support to families in need across South Africa.</p>
+        </section>
+
+        <!-- Donation Form - UPDATED for Validation -->
+        <section>
+            <h2>Donation Details</h2>
+            <!-- UPDATED: Added ID, action, and method for JavaScript validation/submission -->
+            <form id="donationForm" action="process_donation.php" method="POST">
+
+                <!-- NEW: Error message display area for JavaScript validation feedback -->
+                <div id="form-error-message" style="color: red; margin-bottom: 1rem; font-weight: bold;"></div>
+
+                <!-- Donation Amount -->
                 <div>
-                    <button type="button">R50</button>
-                    <button type="button">R100</button>
-                    <button type="button">R250</button>
-                    <button type="button">R500</button>
-                    <input type="number" id="amount" name="amount" placeholder="Or enter a custom amount" min="10">
+                    <label for="amount">Donation Amount (ZAR)</label>
+                    <div>
+                        <!-- These buttons will be targeted by scripts.js for quick amount entry -->
+                        <button type="button" data-amount="50">R50</button>
+                        <button type="button" data-amount="100">R100</button>
+                        <button type="button" data-amount="250">R250</button>
+                        <button type="button" data-amount="500">R500</button>
+                        <input type="number" id="amount" name="amount" placeholder="Or enter a custom amount" min="10" required>
+                    </div>
                 </div>
-            </div>
 
-            <h2>Your Information</h2>
-            <div>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="John Doe">
-            </div>
-            <div>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
-            </div>
+                <!-- Personal Information -->
+                <h2>Your Information</h2>
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
 
-            <h2>Payment Method</h2>
-            <div>
-                <p>Select a payment method:</p>
-                <input type="radio" id="payfast" name="paymentMethod" value="payfast">
-                <label for="payfast">PayFast</label>
-                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
-                <label for="paypal">PayPal</label>
-                <input type="radio" id="givenGain" name="paymentMethod" value="givenGain">
-                <label for="givenGain">GivenGain</label>
-            </div>
+                <!-- Payment Method -->
+                <h2>Payment Method</h2>
+                <div>
+                    <p>Select a payment method:</p>
+                    <input type="radio" id="payfast" name="paymentMethod" value="payfast" required>
+                    <label for="payfast">PayFast</label>
+                    <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                    <label for="paypal">PayPal</label>
+                    <input type="radio" id="givenGain" name="paymentMethod" value="givenGain">
+                    <label for="givenGain">GivenGain</label>
+                </div>
 
-            <button type="submit">Complete Donation</button>
-        </form>
-    </section>
+                <!-- NEW: Submission status message area -->
+                <div id="submission-status" style="margin-top: 1rem; color: green; font-weight: bold;"></div>
 
-    <section>
-        <h2>Thank You!</h2>
-        <p>Your support is greatly appreciated and makes a real difference in the lives of many. We will send a confirmation email shortly.</p>
-    </section>
-</main>
+                <!-- Submit Button -->
+                <button type="submit">Complete Donation</button>
+            </form>
+        </section>
+
+        <!-- Acknowledgment/Confirmation section -->
+        <section>
+            <h2>Thank You!</h2>
+            <p>Your support is greatly appreciated and makes a real difference in the lives of many. We will send a confirmation email shortly.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        <p>123 Helping Hands St., Johannesburg, South Africa</p>
+        <p>Email: info@helpinghands.org</p>
+        <p>Phone: +27 11 123 4567</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- REQUIRED: Added JavaScript files for site functionality and form validation -->
+    <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
+
 </body>
 </html>
