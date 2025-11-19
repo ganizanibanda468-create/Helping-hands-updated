@@ -3,63 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Helping Hands Foundation</title>
+    <title>Helping Hands Foundation - Get Involved</title>
+    <!-- REQUIRED: Link the external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-    <section>
-        <h1>Get Involved</h1>
-        <p>There are many ways to contribute to our mission and make a positive impact. Whether you have time, skills, or resources to share, we have a place for you.</p>
-    </section>
 
-    <section>
-        <h2>Volunteer With Us</h2>
-        <img src="images/volunteer.webp" alt="Group of volunteers working">
-        <p>Our volunteers are the heart of our organization. By giving your time, you directly help us reach more families and communities in need.</p>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        </a>
         <ul>
-            <li>Help at our next community food drive.</li>
-            <li>Mentor students in our education programs.</li>
-            <li>Assist with administrative tasks at our office.</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
         </ul>
-        <a href="#">Sign Up to Volunteer</a>
-    </section>
+    </nav>
 
-    <section>
-        <h2>Start a Fundraiser</h2>
-        <img src="images/fundraiser.webp" alt="People participating in a charity run">
-        <p>Create your own fundraiser to support our programs. Every rand you raise helps us provide more food, clothing, and educational materials.</p>
-        <ul>
-            <li>Organize a charity run or walk.</li>
-            <li>Host a bake sale or community event.</li>
-            <li>Launch a social media fundraising campaign.</li>
-        </ul>
-        <a href="#">Learn More About Fundraising</a>
-    </section>
+    <main>
+        <section>
+            <h1>Get Involved</h1>
+            <p>There are many ways to contribute to our mission and make a positive impact. Whether you have time, skills, or resources to share, we have a place for you.</p>
+        </section>
 
-    <section>
-        <h2>Other Ways to Help</h2>
-        <ul>
-            <li>
-                <h3>Corporate Partnerships</h3>
-                <p>Partner with us to make a lasting impact through corporate social responsibility initiatives.</p>
-                <a href="#">Contact Us</a>
-            </li>
-            <li>
-                <h3>In-Kind Donations</h3>
-                <p>Donate goods such as non-perishable food items, clothing, or school supplies.</p>
-                <a href="#">Learn More</a>
-            </li>
-            <li>
-                <h3>Spread the Word</h3>
-                <p>Follow us on social media and share our stories to help us reach a wider audience.</p>
-                <div>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                </div>
-            </li>
-        </ul>
-    </section>
-</main>
+        <!-- Volunteer Section -->
+        <section>
+            <h2>Volunteer With Us</h2>
+            <!-- UPDATED: Added srcset/sizes for the placeholder image for responsiveness -->
+            <img  
+                src="images/dedicated volunteering.jpg" 
+                alt="Group of volunteers working"
+                srcset="images/dedicated volunteering.jpg"
+                sizes="(max-width: 768px) 100vw, 600px">
+            <p>Our volunteers are the heart of our organization. By giving your time, you directly help us reach more families and communities in need.</p>
+            <ul>
+                <li>Help at our next community food drive.</li>
+                <li>Mentor students in our education programs.</li>
+                <li>Assist with administrative tasks at our office.</li>
+            </ul>
+            <a href="contact.html">Sign Up to Volunteer</a>
+        </section>
+
+        <!-- Fundraise Section -->
+        <section>
+            <h2>Start a Fundraiser</h2>
+            <!-- UPDATED: Added srcset/sizes for the placeholder image for responsiveness -->
+            <img 
+                src="images/fundraiser.webp" 
+                alt="People participating in a charity run"
+                srcset="images/fundraiser.webp"
+                sizes="(max-width: 768px) 100vw, 600px">
+            <p>Create your own fundraiser to support our programs. Every rand you raise helps us provide more food, clothing, and educational materials.</p>
+            <ul>
+                <li>Organize a charity run or walk.</li>
+                <li>Host a bake sale or community event.</li>
+                <li>Launch a social media fundraising campaign.</li>
+            </ul>
+            <a href="contact.html">Learn More About Fundraising</a>
+        </section>
+
+        <!-- Other Ways to Help Section -->
+        <section>
+            <h2>Other Ways to Help</h2>
+            <ul>
+                <li>
+                    <h3>Corporate Partnerships</h3>
+                    <p>Partner with us to make a lasting impact through corporate social responsibility initiatives.</p>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <h3>In-Kind Donations</h3>
+                    <p>Donate goods such as non-perishable food items, clothing, or school supplies.</p>
+                    <a href="contact.html">Learn More</a>
+                </li>
+                <li>
+                    <h3>Spread the Word</h3>
+                    <p>Follow us on social media and share our stories to help us reach a wider audience.</p>
+                    <div>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/fundraiser.webp" alt="Helping Hands Foundation Logo">
+        <p>123 Helping Hands St., Johannesburg, South Africa</p>
+        <p>Email: info@helpinghands.org</p>
+        <p>Phone: +27 11 123 4567</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    
+    <!-- REQUIRED: Added JavaScript files for site functionality and form validation -->
+    <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
+
 </body>
 </html>
