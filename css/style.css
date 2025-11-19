@@ -301,3 +301,323 @@ footer a {
         padding-bottom: 1rem;
     }
 }
+/* ----------------------------------------------------------------
+ * Base and Typography
+ * ---------------------------------------------------------------- */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #28a745; /* Green */
+    --accent-color: #ffc107; /* Yellow */
+    --text-color: #333;
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* ----------------------------------------------------------------
+ * Navigation and Footer
+ * ---------------------------------------------------------------- */
+
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+footer div a {
+    color: var(--accent-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------
+ * Hero Section (index.html header)
+ * ---------------------------------------------------------------- */
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.5);
+}
+
+header div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header a:first-of-type {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+header a:last-of-type {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* ----------------------------------------------------------------
+ * General Section Styling
+ * ---------------------------------------------------------------- */
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex layout for program/event lists */
+.event-list, .past-events-gallery, .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.past-events-gallery img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.cta {
+    background-color: var(--background-light);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* ----------------------------------------------------------------
+ * Forms and Inputs
+ * ---------------------------------------------------------------- */
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; /* Crucial for padding/border not to exceed width */
+}
+
+/* Donation Quick Select Buttons */
+#donationForm > div:nth-child(3) > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#donationForm button[data-amount] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#donationForm button[data-amount]:hover {
+    background-color: var(--secondary-color);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* Map Placeholder Styling */
+#location-map {
+    margin: 20px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------------------
+ * Responsive Overrides (Mobile First)
+ * ---------------------------------------------------------------- */
+
+/* Tablet and Desktop Layout Adjustments */
+@media (min-width: 768px) {
+    nav {
+        padding: 10px 40px;
+    }
+
+    header img {
+        height: 500px;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    /* Program sections alignment */
+    main section:not(:first-child) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+        align-items: center;
+        text-align: left;
+    }
+
+    main section:nth-child(even) {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    main section img {
+        margin: 0;
+    }
+
+    main section h2 {
+        text-align: left;
+        grid-column: 1 / -1; /* spans all columns */
+        margin-bottom: 10px;
+    }
+
+    /* For even sections, move image to the right */
+    main section:nth-child(even) h2 {
+        text-align: right;
+    }
+}
