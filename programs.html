@@ -3,48 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Programs - Helping Hands Foundation</title>
+    <title>Helping Hands Foundation - Our Programs</title>
+    <!-- REQUIRED: Link the external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-    <section>
-        <h1>Our Programs</h1>
-        <p>At Helping Hands Foundation, our programs are designed to address the most pressing needs of vulnerable communities in South Africa. Each initiative is a step towards our vision of a country where every family has dignity and access to the necessities of life.</p>
-    </section>
 
-    <section>
-        <h2>Food Outreach</h2>
-        <img src="images/foodoutreach.webp" alt="Volunteers distributing food">
-        <p>Our Food Outreach program ensures that no one goes hungry. We work with local farms and food banks to collect and distribute nutritious food parcels to impoverished families on a weekly basis.</p>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        </a>
         <ul>
-            <li>Distributing over 1,000 food parcels monthly.</li>
-            <li>Working with community kitchens to provide warm meals.</li>
-            <li>Conducting nutritional workshops to promote healthy eating.</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section>
-        <h2>Clothing Drives</h2>
-        <img src="images/donation.webp" alt="Donated clothes being sorted">
-        <p>Through our Clothing Drives, we provide dignity and comfort to those in need. We collect new and gently used clothing for all ages, with special distributions during the cold winter months to provide warmth and protection.</p>
-        <ul>
-            <li>Collecting and sorting donations from the public.</li>
-            <li>Partnering with shelters to identify needs.</li>
-            <li>Organizing seasonal distribution events.</li>
-        </ul>
-    </section>
+    <main>
+        <section>
+            <h1>Our Programs</h1>
+            <p>At Helping Hands Foundation, our programs are designed to address the most pressing needs of vulnerable communities in South Africa. Each initiative is a step towards our vision of a country where every family has dignity and access to the necessities of life.</p>
+        </section>
 
-    <section>
-        <h2>Education Support</h2>
-        <img src="images/charity edu.webp" alt="Students with school supplies">
-        <p>We believe that education is the key to a brighter future. This program focuses on providing students with the resources they need to succeed, including school supplies, books, and mentorship opportunities.</p>
-        <ul>
-            <li>Distributing stationery and textbooks to schools.</li>
-            <li>Offering after-school tutoring programs.</li>
-            <li>Providing scholarships for high-achieving students.</li>
-        </ul>
-    </section>
-</main>
+        <!-- Food Outreach Program -->
+        <section>
+            <h2>Food Outreach</h2>
+            <!-- UPDATED: Implemented srcset and sizes for responsive image loading (SEO/Performance) -->
+            <img 
+                src="images/foodoutreach.webp" 
+                alt="Volunteers distributing food"
+                srcset="images/foodoutreach.webp"
+                sizes="(max-width: 768px) 100vw, 800px">
+            <p>Our Food Outreach program ensures that no one goes hungry. We work with local farms and food banks to collect and distribute nutritious food parcels to impoverished families on a weekly basis.</p>
+            <ul>
+                <li>Distributing over 1,000 food parcels monthly.</li>
+                <li>Working with community kitchens to provide warm meals.</li>
+                <li>Conducting nutritional workshops to promote healthy eating.</li>
+            </ul>
+        </section>
+
+        <!-- Clothing Drives Program -->
+        <section>
+            <h2>Clothing Drives</h2>
+            <!-- UPDATED: Implemented srcset and sizes for responsive image loading -->
+            <img 
+                src="images/donation.webp" 
+                alt="Donated clothes being sorted"
+                srcset="images/donation.webp"
+                sizes="(max-width: 768px) 100vw, 800px">
+            <p>Through our Clothing Drives, we provide dignity and comfort to those in need. We collect new and gently used clothing for all ages, with special distributions during the cold winter months to provide warmth and protection.</p>
+            <ul>
+                <li>Collecting and sorting donations from the public.</li>
+                <li>Partnering with shelters to identify needs.</li>
+                <li>Organizing seasonal distribution events.</li>
+            </ul>
+        </section>
+
+        <!-- Education Support Program -->
+        <section>
+            <h2>Education Support</h2>
+            <!-- UPDATED: Implemented srcset and sizes for responsive image loading -->
+            <img 
+                src="images/charity_edu.webp" 
+                alt="Students with school supplies"
+                srcset="images/charity edu.webp"
+                sizes="(max-width: 768px) 100vw, 800px">
+            <p>We believe that education is the key to a brighter future. This program focuses on providing students with the resources they need to succeed, including school supplies, books, and mentorship opportunities.</p>
+            <ul>
+                <li>Distributing stationery and textbooks to schools.</li>
+                <li>Offering after-school tutoring programs.</li>
+                <li>Providing scholarships for high-achieving students.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        <p>123 Helping Hands St., Johannesburg, South Africa</p>
+        <p>Email: info@helpinghands.org</p>
+        <p>Phone: +27 11 123 4567</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- REQUIRED: Added JavaScript files for site functionality and form validation -->
+    <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
+
 </body>
 </html>
