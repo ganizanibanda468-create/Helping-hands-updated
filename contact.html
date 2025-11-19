@@ -3,54 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Helping Hands Foundation</title>
+    <title>Helping Hands Foundation - Contact Us</title>
+    <!-- REQUIRED: Link the external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Optional: Link to a CSS file for the map library (e.g., Leaflet) if using an external library -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
 </head>
 <body>
-<main>
-    <section>
-        <h1>Contact Us</h1>
-        <p>We would love to hear from you. Whether you have a question, a suggestion, or just want to say hello, please use the form below to get in touch.</p>
-    </section>
 
-    <section>
-        <h2>Send Us a Message</h2>
-        <form>
-            <div>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-            </div>
-            <div>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-            </div>
-            <div>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Your inquiry subject" required>
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
 
-    <section>
-        <h2>Our Contact Information</h2>
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you. Whether you have a question, a suggestion, or just want to say hello, please use the form below to get in touch.</p>
+        </section>
+
+        <!-- Contact Form - UPDATED for Validation and Message Type -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <!-- UPDATED: Added ID, action, and method for JavaScript validation/submission -->
+            <form id="contactForm" action="submit_contact.php" method="POST">
+                <!-- NEW: Error message display area for JavaScript validation feedback -->
+                <div id="form-error-message" style="color: red; margin-bottom: 1rem; font-weight: bold;"></div>
+
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+
+                <!-- NEW: Added 'Type of Message' dropdown field -->
+                <div>
+                    <label for="messageType">Type of Message</label>
+                    <select id="messageType" name="messageType" required>
+                        <option value="" disabled selected>Select a type...</option>
+                        <option value="general">General Message</option>
+                        <option value="inquiry">Specific Inquiry</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Your inquiry subject" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+                
+                <!-- NEW: Submission status message area -->
+                <div id="submission-status" style="margin-top: 1rem; color: green; font-weight: bold;"></div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section>
+            <h2>Our Contact Information</h2>
+            <div class="contact-info">
+                <div>
+                    <h3>Address</h3>
+                    <p>123 Helping Hands St.<br>Johannesburg, South Africa</p>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>info@helpinghands.org</p>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+27 11 123 4567</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Interactive Map Section Placeholder -->
+        <section>
+            <h2>Find Our Office</h2>
+            <div id="location-map" style="height: 400px; border: 1px solid #ccc; border-radius: 5px; background-color: #eee;">
+                <!-- The interactive map will be rendered here by JavaScript -->
+                <p style="text-align: center; padding-top: 180px;">Map loading...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        <p>123 Helping Hands St., Johannesburg, South Africa</p>
+        <p>Email: info@helpinghands.org</p>
+        <p>Phone: +27 11 123 4567</p>
         <div>
-            <h3>Address</h3>
-            <p>123 Helping Hands St.<br>Johannesburg, South Africa</p>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
         </div>
-        <div>
-            <h3>Email</h3>
-            <p>info@helpinghands.org</p>
-        </div>
-        <div>
-            <h3>Phone</h3>
-            <p>+27 11 123 4567</p>
-        </div>
-    </section>
-</main>
+    </footer>
+
+    <!-- REQUIRED: Added JavaScript files for site functionality and form validation -->
+    <!-- Place map library scripts here if needed (e.g., Leaflet JS) -->
+    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+
+    <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
+
 </body>
 </html>
