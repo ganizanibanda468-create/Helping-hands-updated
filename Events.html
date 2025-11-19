@@ -3,54 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Events - Helping Hands Foundation</title>
+    <title>Helping Hands Foundation - Events</title>
+    <!-- REQUIRED: Link the external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Optional: Link to a CSS file for the Lightbox library (e.g., SimpleLightbox) -->
+    <!-- <link rel="stylesheet" href="css/simple-lightbox.min.css" /> -->
 </head>
 <body>
-<main>
-    <section>
-        <h1>Our Events</h1>
-        <p>Join us at our upcoming events to get involved and support our community. You can also view past events to see the impact we've made.</p>
-    </section>
 
-    <section>
-        <h2>Upcoming Events</h2>
-        <div>
-            <div>
-                <h3>Annual Fundraising Gala</h3>
-                <p>Date: November 20, 2025</p>
-                <p>Location: City Hall, Johannesburg</p>
-                <p>Join us for an evening of music, dinner, and inspiration as we celebrate our achievements and raise funds for our programs.</p>
-            </div>
-            <div>
-                <h3>Community Food Drive</h3>
-                <p>Date: October 15, 2025</p>
-                <p>Location: Various community centers</p>
-                <p>Help us collect and distribute food parcels to families in need. Your help makes a direct impact!</p>
-            </div>
-        </div>
-    </section>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
 
-    <section>
-        <h2>Past Events Gallery</h2>
+    <main>
+        <section>
+            <h1>Our Events</h1>
+            <p>Join us at our upcoming events to get involved and support our community. You can also view past events to see the impact we've made.</p>
+        </section>
+
+        <!-- Upcoming Events List -->
+        <section>
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <div>
+                    <h3>Annual Fundraising Gala</h3>
+                    <p>Date: November 20, 2025</p>
+                    <p>Location: City Hall, Johannesburg</p>
+                    <p>Join us for an evening of music, dinner, and inspiration as we celebrate our achievements and raise funds for our programs.</p>
+                </div>
+                <div>
+                    <h3>Community Food Drive</h3>
+                    <p>Date: October 15, 2025</p>
+                    <p>Location: Various community centers</p>
+                    <p>Help us collect and distribute food parcels to families in need. Your help makes a direct impact!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events Section - UPDATED for Lightbox Gallery -->
+        <section>
+            <h2>Past Events Gallery</h2>
+            <div id="lightbox-gallery" class="past-events-gallery">
+                <div>
+                    <!-- UPDATED: Wrapped image in <a> tag for Lightbox functionality -->
+                    <a href="images/OIP_full.webp" data-lightbox="event-gallery" data-title="Back-to-School Supply Drive">
+                        <img 
+                            src="images/OIP.webp" 
+                            alt="Past event photo: Children with school supplies"
+                            srcset="images/OIP-small.webp 480w, images/OIP-medium.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 33vw">
+                    </a>
+                    <h3>Back-to-School Supply Drive</h3>
+                    <p>We provided school supplies to over 500 students in Soweto.</p>
+                </div>
+                <div>
+                    <!-- UPDATED: Wrapped image in <a> tag for Lightbox functionality -->
+                    <a href="images/OIP_full_1.webp" data-lightbox="event-gallery" data-title="Winter Clothing Distribution">
+                        <img 
+                            src="images/OIP (1).webp" 
+                            alt="Past event photo: Distributing warm clothes"
+                            srcset="images/OIP1-small.webp 480w, images/OIP1-medium.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 33vw">
+                    </a>
+                    <h3>Winter Clothing Distribution</h3>
+                    <p>Our team distributed warm blankets and clothes to families in need during the winter season.</p>
+                </div>
+                <div>
+                    <!-- UPDATED: Wrapped image in <a> tag for Lightbox functionality -->
+                    <a href="images/download_full_3.webp" data-lightbox="event-gallery" data-title="Skills Workshop">
+                        <img 
+                            src="images/download 3.webp" 
+                            alt="Past event photo: People at a workshop"
+                            srcset="images/download3-small.webp 480w, images/download3-medium.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 33vw">
+                    </a>
+                    <h3>Skills Workshop</h3>
+                    <p>We hosted a workshop to teach valuable skills like coding and basic finance to community members.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/logo.webp" alt="Helping Hands Foundation Logo">
+        <p>123 Helping Hands St., Johannesburg, South Africa</p>
+        <p>Email: info@helpinghands.org</p>
+        <p>Phone: +27 11 123 4567</p>
         <div>
-            <div>
-                <img src="images/fam icon.webp" alt="Past event photo">
-                <h3>Back-to-School Supply Drive</h3>
-                <p>We provided school supplies to over 500 students in Soweto.</p>
-            </div>
-            <div>
-                <img src="images/OIP 2.webp" alt="Past event photo">
-                <h3>Winter Clothing Distribution</h3>
-                <p>Our team distributed warm blankets and clothes to families in need during the winter season.</p>
-            </div>
-            <div>
-                <img src="images/OIP.webp" alt="Past event photo">
-                <h3>Skills Workshop</h3>
-                <p>We hosted a workshop to teach valuable skills like coding and basic finance to community members.</p>
-            </div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
         </div>
-    </section>
-</main>
+    </footer>
+
+    <!-- REQUIRED: Added JavaScript files for site functionality and form validation -->
+    <!-- Place Lightbox library scripts here (e.g., simple-lightbox.min.js) -->
+    <!-- <script src="js/simple-lightbox.min.js"></script> -->
+
+    <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
+
 </body>
 </html>
